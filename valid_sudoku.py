@@ -55,7 +55,7 @@ def is_unique_list(num_list):
 
     
 def is_valid(arr):
-     if (check_rows(arr)): #and check_cols(arr) and check_blocks(arr)):
+     if (check_rows(arr) and check_cols(arr) and check_blocks(arr)):
         return True
      else:
         return False
