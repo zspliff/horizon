@@ -1,6 +1,8 @@
 import numpy
 
-
+""" get the array split it by row using numpy and send
+    it to the unique checker
+"""
 def check_rows(arr):
 
     for i in range(9):
@@ -8,12 +10,24 @@ def check_rows(arr):
             return False
     
     return True
+""" get the array split it by row using numpy and send
+    it to the unique checker
+"""
 
+"""
+ get the array split it by column using numpy and send
+    it to the unique checker
+"""
 def check_cols(arr):
     for i in range(9):
         if not is_unique_list(arr[:, i]):
             return False
     return True
+
+""" uses numpy to split the matrix into 9 smaller ones
+    then sends each one of the new matrixe to check_cols 
+    and check rows to see if the its a valid block
+"""
 
 def check_blocks(arr):
     for i in range(0, 9, 3):
@@ -26,6 +40,11 @@ def check_blocks(arr):
 
         
     
+""" this creates a set and takes the incoming row or column
+    to and appends to the set. Sense the set doesnt append an
+    existing element if there are elemetns repeated elements
+    in the original list the lengths should be differnt
+"""
 
 def is_unique_list(num_list):
      unique_set = set()
